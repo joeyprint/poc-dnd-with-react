@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactBeautifulDnd from "./Components/ReactBeautifulDnd";
+import ReactDnd from "./Components/ReactDnd";
+import ReactDraggable from "./Components/ReactDraggable";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: 16 }}>
+      <h2>React Beautiful DND </h2>
+      <ReactBeautifulDnd />
+
+      <div style={{ paddingTop: 16 }} />
+      <h2>React DND </h2>
+      <ReactDnd />
+
+      <div style={{ paddingTop: 16 }} />
+      <h2>React Draggable </h2>
+      <ReactDraggable />
     </div>
   );
 }
