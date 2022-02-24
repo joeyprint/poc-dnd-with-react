@@ -1,5 +1,5 @@
 import ReactBeautifulDnd from "./Components/ReactBeautifulDnd";
-import ReactDnd from "./Components/ReactDnd";
+import QuestionDnd from "./Containers/QuestionDnd";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
 
       <div style={{ paddingTop: 16 }} />
       <h2>React DND </h2>
-      <ReactDnd />
+      <QuestionDnd />
     </div>
   );
 }
