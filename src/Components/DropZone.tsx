@@ -32,20 +32,6 @@ const DropZone = (props: DropZoneProps) => {
 
         const splitItemPath = itemPath.split("-");
 
-        // limit columns when dragging from one row to another row
-        // const dropZonePathRowIndex = splitDropZonePath[0];
-        // const itemPathRowIndex = splitItemPath[0];
-        // const diffRow = dropZonePathRowIndex !== itemPathRowIndex;
-
-        // console.log({
-        //   dropZonePathRowIndex,
-        //   itemPathRowIndex,
-        //   splitDropZonePath,
-        // });
-        // if (diffRow) {
-        //   return false;
-        // }
-
         // Invalid (Can't drop a parent element (row) into a child (column))
         // const parentDropInChild = splitItemPath.length < splitDropZonePath.length;
         // if (parentDropInChild) return false;

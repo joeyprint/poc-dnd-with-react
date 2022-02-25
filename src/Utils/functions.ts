@@ -1,15 +1,13 @@
 export const reorder = (list: any, startIndex: number, endIndex: number) => {
-  console.log({ list });
   const result = Array.from(list);
-  console.log("result array ftom >>>", { result });
   const [removed] = result.splice(startIndex, 1);
 
-  if (endIndex === 0) {
-    result.splice(endIndex, 0, removed);
-  } else {
+  if (startIndex <= endIndex) {
     result.splice(endIndex - 1, 0, removed);
+  } else {
+    result.splice(endIndex, 0, removed);
   }
-  console.log({ result });
+
   return result;
 };
 
