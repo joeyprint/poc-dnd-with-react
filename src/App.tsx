@@ -1,5 +1,8 @@
+import "./App.css";
 import ReactBeautifulDnd from "./Components/ReactBeautifulDnd";
 import QuestionDnd from "./Containers/QuestionDnd";
+import QuestionDndGroup from "./Containers/QuestionDndGroup";
+import QuestionDndWithDropZone from "./Containers/QuestionDndWithDropZone";
 
 function App() {
   return (
@@ -10,6 +13,14 @@ function App() {
       <div style={{ paddingTop: 16 }} />
       <h2>React DND </h2>
       <QuestionDnd />
+
+      {/* <div style={{ paddingTop: 16 }} />
+      <h2>Question DND Groups</h2>
+      <QuestionDndGroup /> */}
+
+      <div style={{ paddingTop: 16 }} />
+      <h2>Question DND With DropZone</h2>
+      <QuestionDndWithDropZone />
     </div>
   );
 }
