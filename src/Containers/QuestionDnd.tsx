@@ -5,16 +5,17 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import QuestionItem from "../Components/QuestionItem";
 
 const QUESTION = [
-  { id: "1", question: "Which one is animal" },
-  { id: "2", question: "Which one isn't IT gadgets" },
-  { id: "3", question: "Which one isn't Apple's products" },
-  { id: "4", question: "Which one is Meta's products" },
-  { id: "5", question: "What is result of 1 plus 3" },
+  { id: "1", question: "Which one is animal", order: 1 },
+  { id: "2", question: "Which one isn't IT gadgets", order: 2 },
+  { id: "3", question: "Which one isn't Apple's products", order: 3 },
+  { id: "4", question: "Which one is Meta's products", order: 4 },
+  { id: "5", question: "What is result of 1 plus 3", order: 5 },
 ];
 
 type QUESTION_TYPE = {
   id: string;
   question: string;
+  order: number;
 };
 
 const QuestionDnd = () => {

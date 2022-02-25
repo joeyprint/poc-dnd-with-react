@@ -15,16 +15,19 @@ interface DragItem {
 
 const QuestionItem = ({
   id,
+  order,
   question,
   index,
   moveCard,
 }: {
   id: string;
+  order: number;
   question: string;
   index: number;
   moveCard: (dragIndex: number, hoverIndex: number) => void;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+
   const [{ handlerId }, drop] = useDrop<
     DragItem,
     void,
@@ -48,32 +51,32 @@ const QuestionItem = ({
         return;
       }
 
-      // Determine rectangle on screen
-      const hoverBoundingRect = ref.current?.getBoundingClientRect();
+      // // Determine rectangle on screen
+      // const hoverBoundingRect = ref.current?.getBoundingClientRect();
 
-      // Get vertical middle
-      const hoverMiddleY =
-        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+      // // Get vertical middle
+      // const hoverMiddleY =
+      //   (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
 
-      // Determine mouse position
-      const clientOffset = monitor.getClientOffset();
+      // // Determine mouse position
+      // const clientOffset = monitor.getClientOffset();
 
-      // Get pixels to the top
-      const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top;
+      // // Get pixels to the top
+      // const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top;
 
-      // Only perform the move when the mouse has crossed half of the items height
-      // When dragging downwards, only move when the cursor is below 50%
-      // When dragging upwards, only move when the cursor is above 50%
+      // // Only perform the move when the mouse has crossed half of the items height
+      // // When dragging downwards, only move when the cursor is below 50%
+      // // When dragging upwards, only move when the cursor is above 50%
 
-      // Dragging downwards
-      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-        return;
-      }
+      // // Dragging downwards
+      // if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
+      //   return;
+      // }
 
-      // Dragging upwards
-      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-        return;
-      }
+      // // Dragging upwards
+      // if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+      //   return;
+      // }
 
       // Time to actually perform the action
       moveCard(dragIndex, hoverIndex);
@@ -103,7 +106,7 @@ const QuestionItem = ({
 
   return (
     <div ref={ref} data-handler-id={handlerId} style={{ opacity, cursor }}>
-      <p style={{ fontSize: 16 }}>{`${index + 1} ${question}`}</p>
+      <p style={{ fontSize: 16 }}>{`${order} ${question}`}</p>
     </div>
   );
 };
