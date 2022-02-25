@@ -1,5 +1,5 @@
 import "./App.css";
-import ReactBeautifulDnd from "./Components/ReactBeautifulDnd";
+import ReactBeautifulDnd from "./Containers/ReactBeautifulDnd";
 import QuestionDnd from "./Containers/QuestionDnd";
 import QuestionDndWithDropZone from "./Containers/QuestionDndWithDropZone";
 
