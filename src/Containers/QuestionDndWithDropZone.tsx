@@ -58,16 +58,7 @@ const QuestionDndWithDropZone = () => {
 
       // Pure move (no create)
       if (splitItemPath.length === splitDropZonePath.length) {
-        console.log("entry handleMoveWithinParent");
         if (pathToItem === pathToDropZone) {
-          console.log(
-            "update section group",
-            handleMoveWithinParent(
-              _sectionGroup,
-              splitDropZonePath,
-              splitItemPath
-            )
-          );
           setSectionGroup(
             handleMoveWithinParent(
               _sectionGroup,
