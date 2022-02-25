@@ -25,7 +25,6 @@ const DropZone = (props: DropZoneProps) => {
         const splitDropZonePath = dropZonePath.split("-");
         const itemPath = item.path;
 
-        console.log({ dropZonePath, itemPath });
         if (!itemPath) {
           return true;
         }

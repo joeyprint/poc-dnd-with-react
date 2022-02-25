@@ -19,7 +19,6 @@ export const reorderChildren = (
   if (splitDropZonePath.length === 1) {
     const dropZoneIndex = Number(splitDropZonePath[0]);
     const itemIndex = Number(splitItemPath[0]);
-    console.log({ itemIndex, dropZoneIndex });
     return reorder(children, itemIndex, dropZoneIndex);
   }
 
